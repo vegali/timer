@@ -1,0 +1,108 @@
+<view class="result-container">
+    <view class="section infoWrap" wx:if="{{showInfo}}">
+        <view class="userinfo">
+            <block wx:if="{{hasUserInfo}}">
+                <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+                <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+            </block>
+        </view>
+        <view class="section_title">你在这个世界上存在了</view>
+        <view class="infoTable">
+            <view class='flex-wrap'>
+                <view class='flex-item'>{{liveYear}}<text>年</text></view>
+                <view class='flex-item'>{{liveMonth}}<text>月</text></view>
+                <view class='flex-item'>{{liveDay}}<text>日</text></view>
+            </view>
+            <view class='flex-wrap'>
+                <view class='flex-item'>{{liveHour}}<text>小时</text></view>
+                <view class='flex-item'>{{liveMinute}}<text>分钟</text></view>
+                <view class='flex-item'>{{liveSecond}}<text>秒</text></view>
+            </view>
+        </view>
+    </view>
+    <view class="section birthWrap" wx:if="{{showBirth}}">
+        <view class="userinfo">
+            <block wx:if="{{hasUserInfo}}">
+                <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+                <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+            </block>
+        </view>
+        <view class="section_title">你出生的那天</view>
+        <view class="birthTable">
+            <view class='flex-wrap'>
+                <view class='flex-item'>阳历日期</view>
+                <view class='flex-item'>{{birthday.cYear}}年{{birthday.cMonth}}月{{birthday.cDay}}日</view>
+            </view>
+            <view class='flex-wrap'>
+                <view class='flex-item'>农历日期</view>
+                <view class='flex-item'>{{birthday.lYear}}年{{birthday.lMonth}}月{{birthday.lDay}}日</view>
+            </view>
+            <view class='flex-wrap'>
+                <view class='flex-item'>属相</view>
+                <view class='flex-item'>{{birthday.Animal}}</view>
+            </view>
+            <view class='flex-wrap' wx:if="{{birthday.isTerm}}">
+                <view class='flex-item'>节气</view>
+                <view class='flex-item'>{{birthday.Term}}</view>
+            </view>
+            <view class='flex-wrap'>
+                <view class='flex-item'>星座</view>
+                <view class='flex-item'>{{birthday.astro}}</view>
+            </view>
+            <view class='flex-wrap'>
+                <view class='flex-item'>天干地支</view>
+                <view class='flex-item'>{{birthday.gzYear}}年{{birthday.gzMonth}}月{{birthday.gzDay}}日</view>
+            </view>
+            <view class='flex-wrap' wx:if="{{birthday.isLeap}}">
+                <view class='flex-item'>闰月</view>
+                <view class='flex-item'>是</view>
+            </view>
+            <view class='flex-wrap'>
+                <view class='flex-item'>星期</view>
+                <view class='flex-item'>{{birthday.ncWeek}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="section deadWrap" wx:if="{{showDead}}">
+        <view class="userinfo">
+            <block wx:if="{{hasUserInfo}}">
+                <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+                <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+            </block>
+        </view>
+        <view wx:if="{{liveYear<average}}">
+            <view class="section_title">你大约还拥有</view>
+            <view class="infoTable">
+                <view class='flex-wrap'>
+                    <view class='flex-item'>{{deadYear}}<text>年</text></view>
+                    <view class='flex-item'>{{deadMonth}}<text>月</text></view>
+                    <view class='flex-item'>{{deadDay}}<text>日</text></view>
+                </view>
+                <view class='flex-wrap'>
+                    <view class='flex-item'>{{deadHour}}<text>小时</text></view>
+                    <view class='flex-item'>{{deadMinute}}<text>分钟</text></view>
+                    <view class='flex-item'>{{deadSecond}}<text>秒</text></view>
+                </view>
+
+            </view>
+            <view class="section_title">大约还可以</view>
+            <view class="infoTable">
+                <view class='flex-wrap'>
+                    <view class='flex-item'><text>度过</text>{{deadWeek}}<text>个周末</text></view>
+                    <view class='flex-item'><text>享用</text>{{deadFood}}<text>次美食</text></view>
+                    <view class='flex-item'><text>做</text>{{deadLove}}<text>次爱</text></view>
+                </view>
+            </view>
+        </view>
+        <view wx:if="{{liveYear>average}}" class="section_title god_tips">
+            你已经幸运的跑赢了我国平均寿命
+            <view>棒棒哒!!!</view>
+        </view>
+        <text class="tipsText">*2015年数据,我国平均寿命{{average}}岁</text>
+    </view>
+    <view class="btm-nav">
+        <view class="nav-item {{showInfo ? 'current' : ''}}" bindtap="bindNow">现在</view>
+        <view class="nav-item {{showBirth ? 'current' : ''}}" bindtap="bindPast">过去</view>
+        <view class="nav-item {{showDead ? 'current' : ''}}" bindtap="bindFuture">将来</view>
+    </view>
+</view>

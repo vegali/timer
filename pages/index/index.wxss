@@ -1,0 +1,12 @@
+/**index.wxss**/
+
+
+.home{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+.logo{width: 500rpx;height: 500rpx;margin: 0 auto}
+.dateType,.dateChoose,.intoBtn{border: 1px dashed #ddd;width: 400rpx;margin: 20rpx auto;padding: 20rpx 0;}

@@ -1,0 +1,35 @@
+.userinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userinfo-avatar {
+    width: 128rpx;
+    height: 128rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+}
+
+.userinfo-nickname {
+    color: #aaa;
+}
+.section{background-color: #fff;position: absolute;min-height: 100%;width: 90%;top: 0;left: 0;padding: 0 5%;  }
+/*.infoWrap,.birthWrap,.deadWrap{opacity: 0;}*/
+.picker{text-align: center}
+.section_title{padding: 20rpx 0;text-align: center}
+.infoTable{display: table;width: 100%;border-collapse: collapse;}
+.birthTable{display: table;width: 100%;border-collapse: collapse;}
+.flex-wrap{display: table-row;}
+.flex-wrap .flex-item{display: table-cell;text-align: center;border: 1px dashed #ddd;font-size: 36rpx;padding: 20rpx 0}
+.flex-item text{display: block;color: #bbb;font-size: 32rpx}
+.infoTable .flex-item{width: 33.33%;}
+.birthTable .flex-item{width: 50%;}
+
+.tipsText{color: #ddd;font-size: 32rpx;}
+.god_tips{padding: 50rpx 0;font-size: 40rpx;}
+
+/*底导航*/
+.btm-nav{position: fixed;bottom: 0;left: 0;width: 100%;display: flex;border-top:1rpx dashed #ddd;}
+.nav-item{width: 33.33%;text-align: center;padding: 40rpx 0;color: #666; font-size: 35rpx}
+.nav-item.current{color: #000;font-size: 40rpx}
