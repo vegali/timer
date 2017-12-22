@@ -28,6 +28,18 @@ Page({
       maxDate: maxDate
     })
   },
+  onShareAppMessage: function (res) {
+    return {
+      title: '看看自己在这个世界上存在了多长时间',
+      path: '/page/index',
+      success: function(res) {
+        // 转发成功
+      },
+      fail: function(res) {
+        // 转发失败
+      }
+    }
+  },
   bindPickerChange: function (e) {
     this.setData({
       typeIndex: e.detail.value

@@ -63,6 +63,18 @@ Page({
 		});
 		this.bindNow();
 	},
+	onShareAppMessage: function (res) {
+		return {
+			title: '我在这个世界上存在了' + this.data.liveYear + '年,快来看看你的。',
+			path: '/page/index',
+			success: function(res) {
+				// 转发成功
+			},
+			fail: function(res) {
+				// 转发失败
+			}
+		}
+	},
 	getUserInfo: function(e) {
 		app.globalData.userInfo = e.detail.userInfo;
 		this.setData({
