@@ -7,12 +7,6 @@ Page({
     date: '1990-01-01',
     maxDate : '',
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
   onShow: function () {
     let today = new Date(),
         maxDate = today.getFullYear() +'-'+ (today.getMonth() + 1) +'-'+ today.getDate();
@@ -30,8 +24,7 @@ Page({
   },
   onShareAppMessage: function (res) {
     return {
-      title: '看看自己在这个世界上存在了多长时间',
-      path: '/page/index',
+      title: '看看自己存在了多长时间',
       success: function(res) {
         // 转发成功
       },

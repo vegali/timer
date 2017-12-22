@@ -65,8 +65,8 @@ Page({
 	},
 	onShareAppMessage: function (res) {
 		return {
-			title: '我在这个世界上存在了' + this.data.liveYear + '年,快来看看你的。',
-			path: '/page/index',
+			title: '我已经存在了' + this.data.liveYear + '年\n快来看看你的时间吧',
+			path: '/pages/index/index',
 			success: function(res) {
 				// 转发成功
 			},
