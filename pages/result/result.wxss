@@ -17,11 +17,11 @@
 .section{background-color: #fff;position: absolute;min-height: 100%;width: 90%;top: 0;left: 0;padding: 0 5%;  }
 /*.infoWrap,.birthWrap,.deadWrap{opacity: 0;}*/
 .picker{text-align: center}
-.section_title{padding: 20rpx 0;text-align: center}
+.section_title{padding: 10rpx 0;text-align: center}
 .infoTable{display: table;width: 100%;border-collapse: collapse;}
 .birthTable{display: table;width: 100%;border-collapse: collapse;}
 .flex-wrap{display: table-row;}
-.flex-wrap .flex-item{display: table-cell;text-align: center;border: 1px dashed #ddd;font-size: 36rpx;padding: 20rpx 0}
+.flex-wrap .flex-item{display: table-cell;text-align: center;border: 1px dashed #ddd;font-size: 36rpx;padding: 15rpx 0}
 .flex-item text{display: block;color: #bbb;font-size: 32rpx}
 .infoTable .flex-item{width: 33.33%;}
 .birthTable .flex-item{width: 50%;}

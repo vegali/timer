@@ -90,7 +90,10 @@
                 <view class='flex-wrap'>
                     <view class='flex-item'><text>度过</text>{{deadWeek}}<text>个周末</text></view>
                     <view class='flex-item'><text>享用</text>{{deadFood}}<text>次美食</text></view>
+                </view>
+                <view class='flex-wrap'>
                     <view class='flex-item'><text>做</text>{{deadLove}}<text>次爱</text></view>
+                    <view class='flex-item'><text>摇</text>{{deadCar}}<text>次号</text></view>
                 </view>
             </view>
         </view>
